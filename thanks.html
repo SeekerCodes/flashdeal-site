@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>意向已提交 · 合同闪签</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div data-component="header"></div>
+
+<section class="section" style="min-height:62vh;display:flex;align-items:center;">
+  <div class="container" style="text-align:center;max-width:640px;">
+    <div style="width:88px;height:88px;border-radius:50%;background:#e9fbee;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:44px;">✅</div>
+    <h1 style="font-size:30px;font-weight:800;margin-bottom:12px;">购买意向已提交</h1>
+    <p style="color:#6b7280;margin-bottom:8px;" id="thanksCompany">感谢您的信任！</p>
+    <p style="color:#6b7280;line-height:1.9;">销售顾问将在 <b style="color:#4263eb;">1 个工作日内</b>通过电话/微信与您联系，协助完成套餐开通。<br>开通后您将获得 <b style="color:#4263eb;">企业 ID</b>，员工在微信小程序输入同一企业 ID 即可绑定入组织，共享团队额度。</p>
+
+    <div class="notice blue" style="margin:26px 0;text-align:left;line-height:1.9;">
+      <b>接下来会发生什么：</b><br>
+      ① 销售顾问与您确认套餐 → ② 为您开通账号，生成企业 ID → ③ 员工小程序绑定企业 ID → ④ 管理员登录 Web 管理后台管理成员与用量
+    </div>
+
+    <div class="cta-row" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html#free" class="btn btn-primary btn-lg">先去免费体验（送 3 次额度）</a>
+      <a href="pricing.html" class="btn btn-outline btn-lg">返回查看套餐</a>
+    </div>
+    <p style="margin-top:26px;font-size:13px;color:#9aa3b2;">有问题？请联系 sales@flashdeal.cn</p>
+  </div>
+</section>
+
+<div data-component="footer"></div>
+
+<script src="js/components.js"></script>
+<script>
+  (function () {
+    var s = new URLSearchParams(window.location.search);
+    var company = s.get('company');
+    var plan = s.get('plan');
+    if (company) document.getElementById('thanksCompany').textContent = company + '，感谢您的信任！';
+    var map = { starter: '尝鲜版', team: '团队版', growth: '成长企业版', enterprise: '企业定制版' };
+    if (plan && map[plan]) document.getElementById('thanksCompany').textContent = '您选择的【' + map[plan] + '】意向已收到，感谢您的信任！';
+  })();
+</script>
+</body>
+</html>

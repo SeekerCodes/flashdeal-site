@@ -63,7 +63,8 @@ SITE.NAV_ITEMS = [
   { href: 'product.html', label: '产品介绍' },
   { href: 'solutions.html', label: '解决方案' },
   { href: 'pricing.html', label: '套餐价格' },
-  { href: 'faq.html', label: '常见问题' }
+  { href: 'faq.html', label: '常见问题' },
+  { href: 'about.html', label: '关于我们' }
 ];
 
 SITE.headerHTML = function (active) {
@@ -115,8 +116,8 @@ SITE.footerHTML = function () {
           '</div>' +
         '</div>' +
         '<div class="footer-bottom">' +
-          '<span>© 2026 合同闪签 · 让每一次商务沟通，快速变成可签合同</span>' +
-          '<span>ICP 备案号：待备案后填写 ｜ 联系：sales@flashdeal.cn</span>' +
+          '<span>© 2026 合同闪签助手 · 让每一次商务沟通，快速变成可签合同</span>' +
+          '<span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" style="color:inherit;">粤ICP备2026079874号</a> ｜ 联系：sales@flashdeal.cn</span>' +
         '</div>' +
       '</div>' +
     '</footer>'

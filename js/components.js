@@ -117,7 +117,7 @@ SITE.footerHTML = function () {
         '</div>' +
         '<div class="footer-bottom">' +
           '<span>© 2026 合同闪签助手 · 让每一次商务沟通，快速变成可签合同</span>' +
-          '<span>ICP 备案号：备案中 ｜ 联系：sales@flashdeal.cn</span>' +
+          '<span>ICP 备案号：<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" style="color:inherit;">粤ICP备2026079874号-2</a> ｜ 联系：sales@shansign.cn</span>' +
         '</div>' +
       '</div>' +
     '</footer>'
